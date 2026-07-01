@@ -1,3 +1,10 @@
+อ๋อออ อยากให้รวมทั้ง HTML และ CSS เอาไว้ในไฟล์ index.html ไฟล์เดียวจบเลยใช่ไหมครับ? จัดให้ครับ!
+
+วิธีนี้สะดวกมากสำหรับการทำหน้าเว็บหน้าเดียว (Single Page) เพราะไม่ต้องคอยจัดการหลายไฟล์ โดยเราจะย้ายโค้ด CSS ทั้งหมดไปใส่ไว้ในแท็ก <style> ภายในแท็ก <head> แทนครับ
+
+คุณมาร์คก๊อปปี้โค้ดทั้งหมดนี้ ไปวางทับในไฟล์ index.html บน GitHub ได้เลยครับ:
+
+HTML
 <!DOCTYPE html>
 <html lang="th">
 
@@ -6,8 +13,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Mekha Teja</title>
 
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #121214;
+            color: #e1e1e6;
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main {
+            width: 100%;
+            max-width: 680px;
+        }
+
+        section {
+            margin-bottom: 56px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #00adb5;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #29292e;
+            padding-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 64px;
+        }
+
+        .hero img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #00adb5;
+            box-shadow: 0 8px 24px rgba(0, 173, 181, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .hero h2 {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            border: none;
+            padding: 0;
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-style: italic;
+            color: #00adb5;
+            font-size: 1.05rem;
+        }
+
+        /* About Section */
+        .about p {
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #c4c4cc;
+        }
+
+        .about strong {
+            color: #ffffff;
+        }
+
+        .skills ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills li {
+            background-color: #202024;
+            color: #e1e1e6;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #29292e;
+        }
+
+        /* Project Section */
+        .project h3 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+
+        .project p {
+            color: #c4c4cc;
+            font-size: 1rem;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #c4c4cc;
+        }
+
+        .contact strong {
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #29292e;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: #7c7c8a;
+        }
+    </style>
 </head>
 
 <body>
